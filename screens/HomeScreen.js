@@ -10,6 +10,7 @@ import {
   View,
 } from 'react-native';
 
+import BasicSectionList from '../components/BasicSectionList';
 import { MonoText } from '../components/StyledText';
 
 export default function HomeScreen() {
@@ -53,6 +54,7 @@ export default function HomeScreen() {
         </View>
       </ScrollView>
 
+      <BasicSectionList />
       <View style={styles.tabBarInfoContainer}>
         <Text style={styles.tabBarInfoText}>
           This is a tab bar. You can edit it in:
