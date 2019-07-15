@@ -1,9 +1,9 @@
 {
   "devToolsPort": 19002,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 12961,
-  "expoServerNgrokUrl": "https://xc-jfe.anonymous.awesomeproject.exp.direct",
-  "packagerNgrokUrl": "https://packager.xc-jfe.anonymous.awesomeproject.exp.direct",
-  "ngrokPid": 12979
+  "packagerPort": 19003,
+  "packagerPid": 14131,
+  "expoServerNgrokUrl": "https://yw-hhn.anonymous.awesomeproject.exp.direct",
+  "packagerNgrokUrl": "https://packager.yw-hhn.anonymous.awesomeproject.exp.direct",
+  "ngrokPid": 14150
 }

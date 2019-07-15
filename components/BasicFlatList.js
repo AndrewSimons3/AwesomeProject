@@ -1,21 +1,26 @@
 import React, { Component } from 'react';
-import { AppRegistry, SectionList, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, FlatList, StyleSheet, Text, View } from 'react-native';
+import CandidateRow from '../components/CandidateRow';
 
-export default class BasicSectionList extends Component {
+export default class BasicFlatList extends Component {
   render() {
     return (
       <View style={styles.container}>
         <Text style={styles.text}>Below is an example of a table. In React Native this component is called a SectionList.
         In Swift this is called a UITableView.
         </Text>
-        <SectionList
-          sections={[
-            {title: 'D', data: ['Devin']},
-            {title: 'J', data: ['Jackson', 'James', 'Jillian', 'Jimmy', 'Joel', 'John', 'Julie']},
+        <FlatList
+          data={[
+            {key: 'Donlad Trump'},
+            {key: 'Barnie Sanders'},
+            {key: 'Kamala Harris'},
+            {key: 'Joe Biden'},
+            {key: 'John'},
+            {key: 'Jillian'},
+            {key: 'Jimmy'},
+            {key: 'Julie'},
           ]}
-          renderItem={({item}) => <Text style={styles.item}>{item}</Text>}
-          renderSectionHeader={({section}) => <Text style={styles.sectionHeader}>{section.title}</Text>}
-          keyExtractor={(item, index) => index}
+          renderItem={({item}) => <CandidateRow/>}
         />
       </View>
     );
@@ -25,12 +30,13 @@ export default class BasicSectionList extends Component {
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 22
+   paddingTop: 10
   },
   text: {
     paddingLeft: 30,
     paddingRight: 30,
-    color: 'green',
+    paddingBottom: 20,
+    color: 'blue',
     fontWeight: 'bold',
     textAlign: 'center'
   },
