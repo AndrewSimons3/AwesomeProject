@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
-import { AppRegistry, FlatList, StyleSheet, Text, View } from 'react-native';
+import { AppRegistry, Dimensions, FlatList, StyleSheet, Text, View } from 'react-native';
 import CandidateRow from '../components/CandidateRow';
 
 export default class BasicFlatList extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.text}>Below is an example of a table. In React Native this component is called a SectionList.
-        In Swift this is called a UITableView.
+        <Text
+          style={styles.text}
+          adjustsFontSizeToFit={true}
+          numberOfLines={1}>Chances of Winning...
         </Text>
-        <FlatList
+        <FlatList style={styles.flatList}
           data={[
             {key: 'Donald Trump', imagename: 'Donald'},
             {key: 'Bernie Sanders', imagename: 'Donald'},
@@ -30,28 +32,23 @@ export default class BasicFlatList extends Component {
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 10
+   paddingTop: 40
+  },
+  flatList: {
+    backgroundColor: 'gray'
   },
   text: {
     paddingLeft: 30,
     paddingRight: 30,
     paddingBottom: 20,
-    color: 'blue',
+    color: 'red',
     fontWeight: 'bold',
-    textAlign: 'center'
-  },
-  sectionHeader: {
-    paddingTop: 2,
-    paddingLeft: 10,
-    paddingRight: 10,
-    paddingBottom: 2,
-    fontSize: 14,
-    fontWeight: 'bold',
-    backgroundColor: 'rgba(247,247,247,1.0)',
+    textAlign: 'center',
+    fontSize: 200,
+    width: Dimensions.get('window').width
   },
   item: {
     padding: 10,
-    fontSize: 18,
     height: 44,
   },
 })

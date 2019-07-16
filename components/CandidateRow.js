@@ -6,11 +6,7 @@ export default class CandidateRow extends Component {
     return (
       <View style={styles.container}>
       <Image
-        source={
-          __DEV__
-            ? require('../assets/images/Trump.png')
-            : require('../assets/images/robot-prod.png')
-        }
+        source={require('../assets/images/Trump.png')}
         style={styles.welcomeImage}
       />
         <Text style={styles.text}>{this.props.candidateName + " " + this.props.imageName}
