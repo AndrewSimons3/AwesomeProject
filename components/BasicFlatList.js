@@ -11,16 +11,16 @@ export default class BasicFlatList extends Component {
         </Text>
         <FlatList
           data={[
-            {key: 'Donlad Trump'},
-            {key: 'Barnie Sanders'},
-            {key: 'Kamala Harris'},
-            {key: 'Joe Biden'},
-            {key: 'John'},
-            {key: 'Jillian'},
-            {key: 'Jimmy'},
-            {key: 'Julie'},
+            {key: 'Donald Trump', imagename: 'Donald'},
+            {key: 'Bernie Sanders', imagename: 'Donald'},
+            {key: 'Kamala Harris', imagename: 'Donald'},
+            {key: 'Joe Biden', imagename: 'Donald'},
+            {key: 'John', imagename: 'Donald'},
+            {key: 'Jillian', imagename: 'Donald'},
+            {key: 'Jimmy', imagename: 'Donald'},
+            {key: 'Julie', imagename: 'Donald'}
           ]}
-          renderItem={({item}) => <CandidateRow/>}
+          renderItem={({item}) => <CandidateRow candidateName={item.key} imageName={item.imagename} />}
         />
       </View>
     );

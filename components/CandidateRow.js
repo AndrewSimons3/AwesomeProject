@@ -13,7 +13,7 @@ export default class CandidateRow extends Component {
         }
         style={styles.welcomeImage}
       />
-        <Text style={styles.text}>Donald Trump
+        <Text style={styles.text}>{this.props.candidateName + " " + this.props.imageName}
         </Text>
 
       </View>
