@@ -1,9 +1,21 @@
 import React, { Component } from 'react';
-import { AppRegistry, Dimensions, FlatList, StyleSheet, Text, View } from 'react-native';
+import { ActivityIndicator, AppRegistry, Dimensions, FlatList, StyleSheet, Text, View } from 'react-native';
 import CandidateRow from '../components/CandidateRow';
 
 export default class BasicFlatList extends Component {
+  constructor(props){
+    super(props);
+    this.state ={ isLoading: true}
+  }
   render() {
+
+    if(this.state.isLoading){
+      return(
+        <View style={styles.Loadingcontainer}>
+          <ActivityIndicator style={styles.activityIndicator}/>
+        </View>
+      )
+    }
     return (
       <View style={styles.container}>
         <Text
@@ -31,9 +43,22 @@ export default class BasicFlatList extends Component {
 
 const styles = StyleSheet.create({
   container: {
-   flex: 1,
-   paddingTop: 40
+    flex: 1,
+    paddingTop: 40
   },
+  loadingcontainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginTop: 70
+  },
+  activityIndicator: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 80,
+    color: 'green'
+   },
   flatList: {
     backgroundColor: 'gray'
   },
