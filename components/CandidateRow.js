@@ -5,22 +5,30 @@ export default class CandidateRow extends Component {
   render() {
     return (
       <View style={styles.container}>
-      <Image
-        source={require('../assets/images/Trump.png')}
-        style={styles.welcomeImage}
-      />
-        <Text style={styles.text}>{this.props.candidateName + " " + this.props.imageName}
-        </Text>
-
+        <Image
+          source={{uri: this.props.imageName}}
+          style={styles.welcomeImage}
+        />
       </View>
     );
   }
 }
 
+
 const styles = StyleSheet.create({
   container: {
    flex: 1,
-   paddingTop: 10
+   paddingTop: 10,
+   justifyContent: 'center',
+   alignItems: 'center',
+   backgroundColor: 'white',
+   margin: 10
+  },
+  welcomeImage: {
+    width: 60,
+    height: 75,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   text: {
     paddingLeft: 30,
